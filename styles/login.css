@@ -28,7 +28,7 @@ body {
     background-color: #464679;
     padding: 2em;
     border-radius: 20px;
-    height: 50%;
+    height: 30%;
   }
 
   input {
@@ -68,13 +68,14 @@ header > p{
 }
 .sign{
     float:right;
-    margin-right: 30px;
+    margin: 20px;
 }
 
 .logo{
     width: 50%;
     display: inline;
 }
+
 h3{
     margin-left: 50px;
 }
@@ -105,7 +106,7 @@ footer{
     background-color: #0a0a23;
     border: 1px solid #0a0a23;
     color: #4b4b4b;
-    margin: 30px;
+    margin: 20px;
     border-radius: 10px;
 }
 a{
@@ -128,6 +129,7 @@ a:hover{
     color: #4b4b4b;
 }
 h1{
+    margin-right:70px;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
