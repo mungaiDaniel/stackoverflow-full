@@ -1,37 +1,56 @@
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
 
-header, .header{
-    display: flex;
-    flex-direction: row;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
     width: 100%;
-    justify-content: space-between;
+    height: 100vh;
+    /* background-image: ; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
     align-items: center;
-    background-color: #0a0a23;
-    height: 60px;
-    padding: 0.3em;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-inline-start: 0;
-    margin-block: 0;
-}
-header > p{
-    display: block;
-    margin: 0 0.2rem;
-    padding: 0.2rem;
-}
-.sign{
-    float:right;
-    margin: 10px;
+    justify-content: center;
+
 }
 
-.logo{
-    width: 50%;
-    display: inline;
-}
+  img{
+    object-fit: cover;
+    width: 50px;
+    float: left;
+  }
+  .menu-icon{
+    width: 25px;
+    position:absolute;
+    left: 40px;
+    top: 40px;
 
-h3{
-    margin-left: 50px;
-}
+  }
+  .setting-icon{
+    width: 25px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+  .profile-pic{
+    width: 150px;
+    border-radius: 50%;
+    background: #1d1c1c;
+    padding: 6px;
+    margin-top: 40px;
+  }
+  .profile-box{
+    background: #cf7429;
+    text-align: center;
+    padding: 40px 90px;
+    color: #fff;
+    position: relative;
+    border-radius: 20px;
+  }
 .roam{
     width: 30px;
     height: 60px;
@@ -54,160 +73,61 @@ h3{
       }
     }
 
-    a{
-        color: #f5f6f7;
-        text-decoration: none;
-    }
-    a:hover{
-        color: gray;
-        cursor: pointer;
-    }
-    html{
-        box-sizing: border-box;
-    }
-    body {
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-        background-color: #1b1b32;
-        color: #f5f6f7;
-        font-family: Tahoma;
-        font-size: 18px;
-        position: fixed;
-      }
-    
-      .stack{
-        object-fit: cover;
-        width: 50px;
-        float: left;
-      }
-    .me{
-        border-radius: 50%;
-        box-shadow: 0px 0px 5px 1px grey;
-
-    }
-    .me:hover{
-        opacity: 0.5;
-        cursor: pointer;
-    }
-
-    .sidenav {
-        background-color: rgb(85, 119, 211);
-        color: rgb(36, 31, 31);
-        border-bottom-right-radius: 25px;
-        height: 86%;
-        left: 0;
-        overflow-x: hidden;
-        padding-top: 20px;
-        position: absolute;
-        top: 70px;
-        width: 250px;
-    }
-    .profile {
-        margin-bottom: 20px;
-        margin-top: -12px;
-        text-align: center;
-    }
-    .name {
-        font-size: 20px;
-        font-weight: bold;
-        padding-top: 20px;
-    }
-    .job {
-        font-size: 16px;
-        font-weight: bold;
-        padding-top: 10px;
-    }
-
-    .main {
-        margin-top: 2%;
-        margin-left: 29%;
-        font-size: 28px;
-        padding: 0 10px;
-        width: 58%;
-    }
-    
-    .main h2 {
-        color: #333;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-    
-    .main .card {
-        background-color: rgb(85, 119, 211);
-        border-radius: 18px;
-        color: rgb(36, 31, 31);
-        box-shadow: 1px 1px 8px 0 grey;
-        height: auto;
-        margin-bottom: 20px;
-        padding: 20px 0 20px 50px;
-    }
-    
-    .main .card table {
-        border: none;
-        font-size: 18px;
-        height: 270px;
-        width: 80%;
-    }
-    .edit {
-        position: absolute;
-        color: rgb(36, 31, 31);
-        right: 14%;
-    }
-    
-    .social-media {
-        text-align: center;
-        width: 90%;
-    }
-    
-    .social-media span {
-        margin: 0 10px;
-        cursor: pointer;
-    }
-    
-    .fa-facebook:hover {
-        color: #4267b3 !important;
-    }
-    
-    .fa-twitter:hover {
-        color: #1da1f2 !important;
-    }
-    
-    .fa-instagram:hover {
-        color: #ce2b94 !important;
-    }
-    
-    .fa-invision:hover {
-        color: #f83263 !important;
-    }
-    
-    .fa-github:hover {
-        color: #161414 !important;
-    }
-    
-    .fa-whatsapp:hover {
-        color: #25d366 !important;
-    }
-    
-    .fa-snapchat:hover {
-        color: #fffb01 !important;
-    }
-    .total{
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-    }
-    .num{
-        background-color: #1b1b32;
-        color: darkgreen;
-        width: 60%;
-        height: 30%;
-        padding: 20px;
-        margin-left: 10px;
-        border-radius: 50%;
+footer{
+    text-align: center;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+    background-color: #0a0a23;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 0.3em;
+    justify-content: center;
+    color: white;
 
 
-    }
+}
+ .collapse{
+  margin:auto 0;
+  right: 0;
+}
+
+.profile-bottom{
+    background: #fff;
+    color: #999;
+    padding: 60px 0;
+    margin-right: -90px;
+    margin-left: -90px;
+    margin-bottom: -40px;
+    border-radius: 20px;
+}
+.profile-bottom img{
+    width: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.profile-box button{
+    background: #fff;
+    color: #ff574a;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(244, 67, 54, 0.5);
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: -50px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.profile-box h3{
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.social-media img{
+    width: 20px;
+    margin: 30px 5px;
+    cursor: pointer;
     
-    
+}

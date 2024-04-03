@@ -1,4 +1,10 @@
 document.getElementById('signup').addEventListener('submit', signUp);
+// function addAlert(message) {
+//     $('#alerts').append(
+//         '<div class="alert alert-danger">' + message + '</div>');
+// }
+
+
 
 function signUp(e){
     e.preventDefault();
@@ -7,16 +13,16 @@ function signUp(e){
     let password = document.getElementById('password').value;
     let formData =  JSON.stringify({username:username, email:email, password:password})
   
-    // POST request using fetch()
+    
     fetch('http://127.0.0.1:5000/api/v2/signup', {
     
-    // Adding method type
+  
     method: "POST",
     redirect: "manual",
-    // Adding body or contents to send
+   
     body: formData,
     
-    // Adding headers to the request
+
     headers: new Headers({
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Content-Type, Authorization',
@@ -28,14 +34,13 @@ function signUp(e){
 
 .then((res) => {
     if(!res.ok){
-        const err = new Error(`failed to fetch posts: ${res.status}: username ${username} or email ${email} already exist`)
-        window.alert(err);
+        alert(`failed to fetch posts: ${res.status}: username ${username} or email ${email} already exist`)
     }else if(res.ok){
-        window.alert(`${username} is Registerd Sucessfully`)
-        return window.location.assign("http://127.0.0.1:5502/login.html");
+        alert(`${username} is Registerd Successfully`)
+        return window.location.assign("/login.html");
     }
     return res.json()})
 .then((data)=> {
-    window.alert(data.message)
+    alert(data.message)
     console.log(data)})
 };

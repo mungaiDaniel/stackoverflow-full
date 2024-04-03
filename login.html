@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/login.css">
-    <title>Login page</title>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/login.css">
+  <title>Stackoverflow</title>
 </head>
 <body>
-    <header id="header">
-        <div class="logo">
-            <img src="images/3069740_circle_forum_round icon_stackoverflow_icon.png" alt="logo">
-            <h3>StackOverflow-lite</h3>
-        </div>
-        <div class="roam"></div>
-        <div>
-            <p class="sign"><a href="register.html">sign up</a></p>
-            <p class="sign"><a href="#">sign in</a></p>
-        </div>
-    </header>
-
-    <div class="form">
-        <h1>LOGIN</h1>
-        <form id="login">
-            <input type="text" class="username" placeholder="username" id="name">
-
-            <input type="password"  placeholder="password" id="password">
-
-            <button type="submit" class="button">login</a></button>
-
-        </form>
+  <nav class="navbar">
+    <img src="image/stack.png" alt="logo">
+    <h2 class="logo">Stackoverflow</h2>
+   
+    <div class="menu">
+      <ul>
+        <li><a href="register.html">REGISTER</a></li>
+        <li><a href="#">LOGIN IN</a></li>
+      </ul>
     </div>
 
-    <div class="login-here">
-        <i> Don't have an account <a href="register.html">Register here...</a> </i>
+    <div class="search">
+      <input type="search" class="srch" name="" placeholder="Type To Search">
+      <a href="#"> <button class="btn">Search</button></a>
     </div>
-    <footer>
-        <p class="p-footer">&#169 2022 StackOverflow-Lite</p>
-    </footer>
-    <script src="javascript/login.js"></script>
+  </nav>
+  <div class="main ">
+  
+    <div class="content">
+      <div>
+        <h1 class="cent" > <span class="letter1">Web Design & </span><br> <span class="letter1" >Development</span> <br><span class="letter1">Course</span> </h1>
+        <p class="par">Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Hic doloribus cum <br>cumque totam in. Sint dolorum accusamus perferendis aliquam quia hic mollitia<br> rem iure earum ab eveniet, soluta maiores nobis cum officia architecto<br> sed fugit aperiam facere, maxime expedita. Placeat consectetur labore<br> expedita aspernatur
+          nulla! Necessitatibus iusto,<br> tempora quam obcaecati iste blanditiis dolores.</p>
+          
+          <button class="cn"><a href="#">REGISTER</a></button>
+      </div>
+      <form class="form" id="login">
+        <h2>Login Here</h2>
+        <input type="text" name="name" id="name" required placeholder="Enter Username">
+        <input type="password" name="password" id="password" required placeholder="Enter password">
+        <button class="btnn" type="submit">Login</button>
+
+        <p class="link">Don't have an account<br>
+        <a href="register.html">Sign up</a> here</a></p>
+        <!-- <p style="color: green;">Username Registered successfully</p>
+        <p style="color: red;">Error! username already registered</p> -->
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="javascript/login.js"></script>
 </body>
 </html>
