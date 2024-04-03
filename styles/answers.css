@@ -1,4 +1,4 @@
-html{
+/* html{
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -15,11 +15,7 @@ body {
     overflow: scroll;
   }
 
-  img{
-    object-fit: cover;
-    width: 50px;
-    float: left;
-  }
+
 
   .form {
     height: 60%;
@@ -84,27 +80,7 @@ header > p{
 h3{
     margin-left: 50px;
 }
-.roam{
-    width: 30px;
-    height: 60px;
-    background: -webkit-linear-gradient(90deg, rgb(239, 220, 192), rgb(170, 141, 80), rgb(153, 118, 41) );
-    opacity: 0.4;
-    animation: roam 10s ease-in-out infinite;
-    margin: 0 auto;
-    position:absolute;
-    left: 0;
-}
-@keyframes roam {
-    0% {
-        left: -6%;
-      }
-    50% {
-        left: 100%;
-      }
-    100% {
-        left: -6%;    
-      }
-    }
+
 
     a{
         color: #f5f6f7;
@@ -181,4 +157,110 @@ span{
     margin: 0;
 
     
+} */
+
+
+body {
+    width: 100%;
+    font-family: Tahoma;
+    
+    
+ }
+
+img{
+    object-fit: cover;
+    width: 50px;
+}
+
+.roam{
+    width: 30px;
+    height: 60px;
+    background: -webkit-linear-gradient(90deg, rgb(239, 220, 192), rgb(170, 141, 80), rgb(153, 118, 41) );
+    opacity: 0.4;
+    animation: roam 10s ease-in-out infinite;
+    margin: 0 auto;
+    position:absolute;
+    left: 0;
+}
+
+@keyframes roam {
+    0% {
+        left: -6%;
+      }
+    50% {
+        left: 100%;
+      }
+    100% {
+        left: -6%;    
+      }
+}
+h3{
+    margin-bottom: 20px;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    display:grid;
+    grid-template-columns:1fr 3fr 3fr;
+    justify-content:space-around;
+    gap: 40px;
+    vertical-align: top;
+    padding: 20px;
+ }
+
+
+footer{
+    text-align: center;
+   left: 0;
+   bottom: 0;
+    background-color: #0a0a23;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 0.3em;
+    justify-content: center;
+    color: white;
+
+
+}
+.collapse{
+    margin-left: 650px;
+}
+.dates{
+    display: flex;
+}
+@media (max-width:1020px){
+    .roam{
+        display: none;
+    }
+    .collapse{
+        margin: 0;
+    }
+}
+@media (max-width:760px){
+    .roam{
+        display: none;
+    }
+    .collapse{
+        margin: 0;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+
+    }
+    section{
+        margin-top: 0px;
+    }
+    .home_welcome{
+        display: flex;
+        gap: 0.5rem;
+        
+    }
+    .home_welcome p{
+        font-size: small;
+    }
+
 }

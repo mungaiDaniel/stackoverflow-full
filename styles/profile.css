@@ -1,0 +1,133 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    /* background-image: ; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+  img{
+    object-fit: cover;
+    width: 50px;
+    float: left;
+  }
+  .menu-icon{
+    width: 25px;
+    position:absolute;
+    left: 40px;
+    top: 40px;
+
+  }
+  .setting-icon{
+    width: 25px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+  .profile-pic{
+    width: 150px;
+    border-radius: 50%;
+    background: #1d1c1c;
+    padding: 6px;
+    margin-top: 40px;
+  }
+  .profile-box{
+    background: #cf7429;
+    text-align: center;
+    padding: 40px 90px;
+    color: #fff;
+    position: relative;
+    border-radius: 20px;
+  }
+.roam{
+    width: 30px;
+    height: 60px;
+    background: -webkit-linear-gradient(90deg, rgb(239, 220, 192), rgb(170, 141, 80), rgb(153, 118, 41) );
+    opacity: 0.4;
+    animation: roam 10s ease-in-out infinite;
+    margin: 0 auto;
+    position:absolute;
+    left: 0;
+}
+@keyframes roam {
+    0% {
+        left: -6%;
+      }
+    50% {
+        left: 100%;
+      }
+    100% {
+        left: -6%;    
+      }
+    }
+
+footer{
+    text-align: center;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+    background-color: #0a0a23;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 0.3em;
+    justify-content: center;
+    color: white;
+
+
+}
+ .collapse{
+  margin:auto 0;
+  right: 0;
+}
+
+.profile-bottom{
+    background: #fff;
+    color: #999;
+    padding: 60px 0;
+    margin-right: -90px;
+    margin-left: -90px;
+    margin-bottom: -40px;
+    border-radius: 20px;
+}
+.profile-bottom img{
+    width: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.profile-box button{
+    background: #fff;
+    color: #ff574a;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(244, 67, 54, 0.5);
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: -50px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.profile-box h3{
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.social-media img{
+    width: 20px;
+    margin: 30px 5px;
+    cursor: pointer;
+    
+}
