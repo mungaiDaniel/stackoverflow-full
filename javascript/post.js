@@ -7,7 +7,7 @@ function signUp(e){
     let formData =  JSON.stringify({title:title, body:body})
     console.log(typeof(formData));
   
-    fetch('http://127.0.0.1:5000/api/v2/question', {
+    fetch('https://stackoverflow-v2.onrender.com/api/v2/question', {
     
     method: "POST",
     body: formData,
@@ -23,15 +23,18 @@ function signUp(e){
 
 .then((res) => {
     console.log(res);
+    
     if(!res.ok){
         const err = new Error('detail required')
         window.alert(err);
-        
-    }
+    } 
     return res.json()})
 .then((data)=> {
     console.log(data)
     window.alert('posted sucessfull')
+    document.getElementById('name').value = '';
+    document.getElementById('content').value='';
+    
 }
     )
 };

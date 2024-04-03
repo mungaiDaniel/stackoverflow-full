@@ -2,7 +2,7 @@
 function allQuestion(){
     
 
-    fetch('http://127.0.0.1:5000/api/v2/question')
+    fetch('https://stackoverflow-v2.onrender.com/api/v2/question')
     .then((res) => res.json())
     .then((data) => {
         const sample = document.querySelector('#output');

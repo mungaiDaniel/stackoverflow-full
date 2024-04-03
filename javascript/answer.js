@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(id);
 
 const question_id = urlParams.get('id');
 function getOneQuestion(){
-    fetch(`http://127.0.0.1:5000/api/v2/question/${question_id}`)
+    fetch(`https://stackoverflow-v2.onrender.com/api/v2/question/${question_id}`)
         .then((res) => res.json())
         .then((data) => { 
         const sample = document.querySelector('#output');
@@ -29,7 +29,7 @@ function PostAnswer(e){
     let body = document.getElementById('content').value;
     let formData =  JSON.stringify({body:body})
     console.log(typeof(formData));
-    fetch(`http://127.0.0.1:5000/api/v2/answer/${question_id}`, {
+    fetch(`https://stackoverflow-v2.onrender.com/api/v2/answer/${question_id}`, {
     
         method: "POST",
         body: formData,
@@ -49,7 +49,7 @@ function PostAnswer(e){
         window.alert('posted sucessfull')
 })}
 function getAllAnwers(){
-    fetch(`http://127.0.0.1:5000/api/v2/answers/${question_id}`)
+    fetch(`https://stackoverflow-v2.onrender.com/api/v2/answers/${question_id}`)
     .then((res) => res.json())
     .then((data) => {console.log(data)
 
