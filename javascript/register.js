@@ -14,7 +14,7 @@ function signUp(e){
     let formData =  JSON.stringify({username:username, email:email, password:password})
   
     
-    fetch('http://127.0.0.1:5000/api/v2/signup', {
+    fetch('https://stackoverflow-v2.onrender.com/api/v2/signup', {
     
   
     method: "POST",
