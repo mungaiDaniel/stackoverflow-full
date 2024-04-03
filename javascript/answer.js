@@ -12,7 +12,7 @@ function getOneQuestion(){
         sample.append(div);
         let output = '<h2>Question Details</h2>';
             output += `<h3>${data.data.title}</h3>
-            <span>
+            <span class="dates">
             <p>Asked: ${data.data.date_created}</p>
             <p>Modified: ${data.data.date_modified}</p>
             </span>
@@ -46,6 +46,7 @@ function PostAnswer(e){
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
+        window.alert('posted sucessfull')
 })}
 function getAllAnwers(){
     fetch(`http://127.0.0.1:5000/api/v2/answers/${question_id}`)

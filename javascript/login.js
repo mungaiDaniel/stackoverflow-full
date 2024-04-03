@@ -1,5 +1,8 @@
 document.getElementById('login').addEventListener('submit', logIn);
-
+function addAlert(message) {
+    $('#alerts').append(
+        '<div class="alert alert-danger">' + message + '</div>');
+}
 
 function logIn(e){
     e.preventDefault();
@@ -22,9 +25,9 @@ function logIn(e){
         .then((response) => response.json())
     .then((data) => {
         localStorage.setItem('access_token',data.access_token)
-        if (data.access_token){
-            window.location.assign("http://127.0.0.1:5502/index.html"); 
-            window.alert('welcome')
+        if (data.access_token){ 
+            window.location.assign("/index.html");
+            
         } else{
             const err = new Error(`failed to fetch posts username or password is incorrect`)
                 window.alert(err);}

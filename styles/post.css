@@ -2,14 +2,11 @@ html{
     box-sizing: border-box;
 }
 body {
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
     margin: 0;
-    background-color: #1b1b32;
-    color: #f5f6f7;
     font-family: Tahoma;
     font-size: 18px;
-    position: fixed;
+    height: auto;
   }
 
   img{
@@ -18,69 +15,6 @@ body {
     float: left;
   }
 
-  .form {
-    height: 50%;
-    width: 50%;
-    min-width: 300px;
-    margin:0 auto;
-    margin-top: 50px;
-    display: block;
-    background-color: #464679;
-    padding: 2em;
-    border-radius: 20px;
-    
-  }
-
-  input, textarea {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top:  30px;
-    width: 80%;
-    min-height: 2em;
-    background-color: #0a0a23;
-    border: 1px solid #0a0a23;
-    color: #ffffff;
-    height: 40px;
-    border-radius: 10px;
-    margin-left: 20px;
-  }
-  textarea{
-    height: 100px;
-  }
-
-header, .header{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0a0a23;
-    height: 60px;
-    padding: 0.3em;
-    align-items: center;
-    padding-inline-start: 0;
-    margin-block: 0;
-    align-items: stretch;
-}
-header > p{
-    display: block;
-    margin: 0 0.2rem;
-    padding: 0.2rem;
-}
-.sign{
-    float:right;
-    margin: 20px;
-}
-
-.logo{
-    width: 50%;
-    display: inline;
-}
-
-h3{
-    margin-left: 50px;
-}
 .roam{
     width: 30px;
     height: 60px;
@@ -103,79 +37,58 @@ h3{
       }
     }
 
-    a{
-        color: #f5f6f7;
-        text-decoration: none;
-    }
-    a:hover{
-        color: gray;
-        cursor: pointer;
-    }
-
-    label{
-        margin-top: 50px;
-    }
-    .button{
-        display: block;
-        width: 40%;
-        height: 2em;
-        font-size: 1.1rem;
-        border-color: white;
-        min-width: 300px;
-        background-color: #0a0a23;
-        border: 1px solid #0a0a23;
-        color: #4b4b4b;
-        margin: 20px;
-        border-radius: 10px;
-        padding-right: 20px;
-    }
-    main{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: space-between;
-        gap: 20px;
-        vertical-align: top;
- }
-
- .left{
-    margin-right: 50px;
-    margin-left: 20px;
-    border-right: 2px solid #0a0a23;
-    padding-right: 50px;
-}
-.right{
-    margin-right: 30px;
-    margin-left: 20px;
-    border-left: 2px solid #0a0a23 ;
-    padding-left: 60px;
-}
 footer{
     text-align: center;
-    position: absolute ;
-    bottom: 0;
+    position: fixed;
+   left: 0;
+   bottom: 0;
     background-color: #0a0a23;
     width: 100%;
     height: 60px;
     margin-top: 20px;
     padding: 0.3em;
     justify-content: center;
+    color: white;
+
 
 }
-span{
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
-    font-weight:lighter;
-    gap: 30px;
-}
-.desc{
-    background-color: #232341;
-    border-radius: 15px;
-    padding-top: 0;
-    margin: 0;
 
-    
+main{
+    width: 100%;
+    height: 100%;
+    display:grid;
+    grid-template-columns:1fr 3fr 3fr;
+    justify-content:space-around;
+    gap: 40px;
+    vertical-align: top;
+    padding: 20px;
+ }
+ .collapse{
+  margin:auto 0;
+  position: ab;
+  right: 0;
+}
+.btn{
+  margin-top: 10px;
+}
+.main-question:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 990px){
+  .roam{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 660px){
+ .main{
+  grid-template-columns:1fr ;
+ }
+ 
+}
+@media screen and (max-width: 490px){
+  .navbar{
+    width: 140vw;
+  }
 }
